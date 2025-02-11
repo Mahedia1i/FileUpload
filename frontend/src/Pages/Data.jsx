@@ -11,8 +11,6 @@ function Data() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get("http://localhost:8000/api/v1/get-data");
-        console.log(response);
-        
         setUsers(response.data); 
       } catch (error) {
         setError("Failed to fetch users");
